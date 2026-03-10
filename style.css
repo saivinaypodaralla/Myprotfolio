@@ -1,0 +1,211 @@
+/* Reset */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#f4f6f8;
+  color:#333;
+  line-height:1.6;
+  transition:0.5s;
+  scroll-behavior:smooth;
+}
+
+/* Dark Mode */
+.dark{
+  background:#121212;
+  color:white;
+}
+.dark header{
+  background:linear-gradient(120deg,#000,#333);
+}
+.dark nav a{
+  background:#333;
+  color:white;
+}
+.dark #projects li{
+  background:#1f1f1f;
+}
+.dark input, .dark textarea{
+  background:#222;
+  color:white;
+  border:1px solid #555;
+}
+.dark #resume .resume-btn{
+  background:#ff8c42;
+}
+.dark #resume .resume-btn:hover{
+  background:#ff6600;
+}
+
+/* Header */
+header{
+  text-align:center;
+  padding:40px;
+  background:linear-gradient(120deg,#1e90ff,#6a5acd);
+  color:white;
+  position:relative;
+}
+
+header .social{
+  margin-top:15px;
+}
+header i{
+  margin:10px;
+  color:white;
+  transition:0.3s;
+}
+header i:hover{
+  transform:scale(1.2);
+}
+
+/* Dark Mode Button */
+.dark-btn{
+  padding:5px 15px;
+  border:none;
+  background:white;
+  color:#333;
+  border-radius:5px;
+  cursor:pointer;
+  margin:10px;
+  transition:0.3s;
+}
+.dark-btn:hover{
+  background:#333;
+  color:white;
+}
+
+/* Navbar */
+nav{
+  margin-top:20px;
+}
+nav a{
+  text-decoration:none;
+  margin:10px;
+  padding:10px 20px;
+  background:white;
+  color:#333;
+  border-radius:25px;
+  font-weight:bold;
+  transition:0.3s;
+}
+nav a:hover{
+  background:#333;
+  color:white;
+}
+
+/* Resume Button */
+nav a.resume-btn, .resume-btn{
+  background:#ff6600;
+  color:white;
+}
+nav a.resume-btn:hover, .resume-btn:hover{
+  background:#e65c00;
+}
+
+/* Sections */
+section{
+  padding:50px;
+  max-width:900px;
+  margin:auto;
+}
+
+/* Skills */
+.skill{
+  margin:15px 0;
+}
+.bar{
+  background:#ddd;
+  border-radius:20px;
+  overflow:hidden;
+}
+.bar div{
+  height:15px;
+  width:0;
+  border-radius:20px;
+  animation: fillBar 2s forwards;
+}
+
+/* Skill Widths via CSS Variables */
+.html{--skill-width:90%; background:#ff5733;}
+.css{--skill-width:80%; background:#3498db;}
+.js{--skill-width:70%; background:#f1c40f;}
+.java{--skill-width:60%; background:#2ecc71;}
+.c{--skill-width:50%; background:#9b59b6;}
+
+@keyframes fillBar{
+  0%{width:0;}
+  100%{width:var(--skill-width);}
+}
+
+/* Projects Grid */
+#projects ul{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+  list-style:none;
+}
+#projects li{
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+#projects li:hover{
+  transform:translateY(-5px);
+}
+
+/* Contact */
+form{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+input,textarea{
+  padding:10px;
+  border:1px solid #ccc;
+  border-radius:5px;
+}
+button[type="submit"]{
+  padding:10px;
+  background:#1e90ff;
+  color:white;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  transition:0.3s;
+}
+button[type="submit"]:hover{
+  background:#005ce6;
+}
+#contact a{
+  color:#1e90ff;
+  text-decoration:none;
+  display:block;
+  margin-top:5px;
+}
+
+/* Resume Section Button Hover */
+#resume .resume-btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 20px;
+  font-weight:bold;
+  border-radius:5px;
+  transition:0.3s;
+}
+#resume .resume-btn:hover{
+  transform:scale(1.05);
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#222;
+  color:white;
+}
